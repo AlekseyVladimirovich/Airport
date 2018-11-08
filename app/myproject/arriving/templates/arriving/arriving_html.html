@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <center><p class="h1">Прилетающие рейсы:</p></center>
+<table class="table table-bordered table-striped table-sm">
+  <thead>
+    <tr style="background-color: #C4E6FB;">
+      <th style="width: 100px; vertical-align: middle;"><center>№ рейса</center></th>
+       <th style="width: 100px; vertical-align: middle;"><center>Отправление</center></th>
+      <th style="width: 100px; vertical-align: middle; "><center>Время отправления</center></th>
+       <th style="width: 100px; vertical-align: middle; "><center>Прибытие</center></th>
+     <th style="width: 100px; vertical-align: middle;"><center>Время прибытия</center></th>
+    </tr>
+  </thead>
+  <tbody >
+  {% for post in posts %}
+    <tr class="active">
+      <th scope="row"><center><p>{{post.boardNumber}}</p></center></th>
+      <td><center><p>{{post.from_at}}</p></center></td>
+      <td><center><p>{{post.startTime}}</p></center></td>
+      <td><center><p>{{post.to}}</p></center></td>
+      <td><center><p>{{post.endTime}}</p></center></td>
+    </tr>
+  {%endfor%}
+  </tbody>
+</table>
+
+{% endblock %}

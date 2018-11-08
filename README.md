@@ -1,5 +1,4 @@
 # Airport
-# Airport_board.github.io
 Тестовое задание.
 Задание 1.
 Входные данные:
